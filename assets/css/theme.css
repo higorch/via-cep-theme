@@ -1,0 +1,67 @@
+html, body {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    outline: none;
+    text-decoration: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+input[type="submit"],
+input[type="text"],
+input[type="email"],
+textarea,
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: var(--white);
+    background: var(--orange-2);
+}
+::selection {
+    color: var(--white);
+    background: var(--orange-2);
+}
+
+:root {
+    --orange-1: #e26b13;
+    --orange-2: #ed8528;
+    --black-1: #292725;
+    --black-2: #2d2a27;
+    --white: #ffffff;
+    --black-rgba-65: rgba(0, 0, 0, .7);
+}
+
+/* row */
+.row {
+    display: block;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.row .inner {
+    display: block;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+}
