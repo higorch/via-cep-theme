@@ -1,10 +1,10 @@
 html, body {
-    font-family: 'Roboto';
     margin: 0;
     padding: 0;
 }
 
 * {
+    font-family: 'Roboto';
     outline: none;
     text-decoration: none;
     background-position: center;
@@ -45,12 +45,7 @@ button {
 }
 
 :root {
-    --orange-1: #e26b13;
-    --orange-2: #ed8528;
-    --black-1: #292725;
-    --black-2: #2d2a27;
     --white: #ffffff;
-    --black-rgba-65: rgba(0, 0, 0, .7);
 }
 
 /* row */
@@ -64,4 +59,87 @@ button {
     display: block;
     width: calc(100% + 30px);
     margin-left: -15px;
+}
+
+/* zip-box */
+.zip-box {
+    display: block;
+    width: 100%;
+    max-width: 768px;
+    margin: 30px auto 0 auto;
+    text-align: center;
+    background-color: #f7f2f2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    padding: 60px;
+    border-radius: 15px;
+}
+.zip-box .pin {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 30px;
+}
+.zip-box .pin img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.zip-box .heading {
+    display: block;
+    margin-bottom: 30px;
+}
+.zip-box .heading h2 {
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #575757;
+    margin: 0;
+}
+.zip-box .entry,
+.zip-box .entry .group {
+    display: block;
+}
+.zip-box .entry {
+    width: 380px;
+    margin: 0 auto;
+    text-align: left;
+}
+.zip-box .entry label {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    text-align: left;
+    color: #575757;
+    top: 10px;
+    left: 10px;
+    background-color: #f7f2f2;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+.zip-box .entry .group {
+    font-size: 0;
+}
+.zip-box .entry .group input[type="text"],
+.zip-box .entry .group button {
+    display: inline-block;
+    font-size: initial;
+}
+.zip-box .entry .group input[type="text"] {
+    width: calc(100% - 130px);
+    height: 40px;
+    padding: 8px;
+    background-color: #f7f2f2;
+    border: solid 1px #ccc;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+.zip-box .entry .group button {
+    width: 130px;
+    padding: 8px;
+    height: 40px;
+    border: none;
+    background: linear-gradient(77.73deg, #443e93 8.14%, #7B61FF 90.22%);
+    color: var(--white);
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    cursor: pointer;
 }
