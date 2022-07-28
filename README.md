@@ -1,1 +1,3 @@
-# via-cep-theme
+# Tema WordPress
+
+Integrado com API ViaCep
