@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <div class="show-address active">
+    <div class="show-address">
         <div class="head">
             <div class="col">
                 <b>Endereço</b>
@@ -31,7 +31,7 @@
                 </a>
             </div>
         </div>
-        <p>BR-153, 2514 - Vila Santa, Aparecida de Goiânia - GO, 74910-180</p>
+        <p></p>
     </div>
 
 </div>
