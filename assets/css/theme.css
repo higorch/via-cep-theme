@@ -194,7 +194,7 @@ button {
 }
 
 /* address-box */
-.address-box {
+.addresses-box {
     position: absolute;
     top: 30px;
     bottom: 30px;
@@ -204,33 +204,33 @@ button {
     border-radius: 10px;
     background-color: var(--gray-1);
 }
-.address-box .empty {
+.addresses-box .empty {
     position: relative;
     display: block;
     text-align: center;
     opacity: .15;
 }
-.address-box .empty p {
+.addresses-box .empty p {
     margin: 0;
     font-size: 40px;
     color: var(--purple-1)
 }
-.address-box .empty .icon {
+.addresses-box .empty .icon {
     font-size: 15rem;
     color: var(--purple-1);
 }
-.address-box .heading h2 {
+.addresses-box .heading h2 {
     font-size: 25px;
 }
-.address-box .items {
+.addresses-box .items {
     display: block;
 }
-.address-box .items ul {
+.addresses-box .items ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.address-box .items ul li {
+.addresses-box .items ul li {
     display: block;
     width: 100%;
     padding: 15px;
@@ -238,13 +238,13 @@ button {
     border-radius: 10px;
     color: var(--black-1);
 }
-.address-box .items ul li:last-child {
+.addresses-box .items ul li:last-child {
     margin-bottom: 0;
 }
-.address-box .items ul li:nth-child(odd) {
+.addresses-box .items ul li:nth-child(odd) {
     background-color: var(--gray-3);
 }
-.address-box .items ul li:nth-child(even) {
+.addresses-box .items ul li:nth-child(even) {
     background-color: var(--white);
 }
 
