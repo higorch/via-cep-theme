@@ -39,12 +39,14 @@
             if (data.erro) {
                 cuteToast({
                     type: 'warning',
-                    message: "Não foi possível consultar!"
+                    message: "CEP não encontrado!"
                 });
                 return;
             }
 
-            var address = $.displayIfNotEmpty(data.logradouro, ', ') + $.displayIfNotEmpty(data.bairro, ', ') + $.displayIfNotEmpty(data.localidade, ' - ') + $.displayIfNotEmpty(data.uf, ', ') + $.displayIfNotEmpty(data.cep);
+            console.log(data);
+
+            var address = $.displayIfNotEmpty(data.logradouro, ', ') + $.displayIfNotEmpty(data.bairro, ', ') + $.displayIfNotEmpty(data.complemento, ', ') + $.displayIfNotEmpty(data.localidade, ' - ') + $.displayIfNotEmpty(data.uf, ', ') + $.displayIfNotEmpty(data.cep);
 
             $('.zip-box .show-address').addClass('active');
             $('.zip-box .show-address p').text(address);

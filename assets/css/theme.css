@@ -154,8 +154,8 @@ button {
     transform: scale(0);
     -webkit-transform: scale(0);
 
-    transition: all ease .3s;
-    -webkit-transition: all ease .3s;
+    transition: all ease .15s;
+    -webkit-transition: all ease .15s;
 }
 .zip-box .show-address.active {
     visibility: visible;
