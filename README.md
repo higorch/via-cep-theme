@@ -13,6 +13,7 @@ Integrado com API ViaCep
 
 - Faça a instalação do WordPress.
 - Clone o projeto/tema ou importe dentro da pasta themes.
+- Ative o projeto/tema.
 - Visite o site.
 - Informe o CEP que deseja consultar.
 - Clique no icone de disquete caso queira salvar o endereço consultado.
