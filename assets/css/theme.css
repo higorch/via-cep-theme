@@ -46,10 +46,11 @@ button {
 
 :root {
     --white: #ffffff;
-    --gray-1: #f7f2f2;
+    --gray-1: #faf5f5;
     --gray-2: #cccccc;
+    --gray-3: #f1f0f0;
     --black-1: #575757;
-    --box-shadow-1: 0 2px 5px rgba(0, 0, 0, .2);
+    --purple-1: #7B61FF;
     --linear-gradient-1: linear-gradient(77.73deg, #443e93 8.14%, #7B61FF 90.22%);
 }
 
@@ -68,19 +69,20 @@ button {
 
 /* zip-box */
 .zip-box {
-    display: block;
-    width: 100%;
-    max-width: 768px;
-    margin: 30px auto 0 auto;
+    position: absolute;
+    width: 380px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
     text-align: center;
     background-color: var(--gray-1);
-    box-shadow: var(--box-shadow-1);
-    padding: 60px;
-    border-radius: 15px;
+    padding: 60px 30px;
+    overflow-y: auto;
 }
 .zip-box .pin {
     display: inline-block;
-    width: 150px;
+    width: 130px;
     margin-bottom: 30px;
 }
 .zip-box .pin img {
@@ -88,23 +90,12 @@ button {
     width: 100%;
     height: auto;
 }
-.zip-box .heading {
-    display: block;
-    margin-bottom: 30px;
-}
-.zip-box .heading h2 {
-    font-weight: bold;
-    font-size: 30px;
-    text-transform: uppercase;
-    color: var(--black-1);
-    margin: 0;
-}
 .zip-box .entry,
 .zip-box .entry .group {
     display: block;
 }
 .zip-box .entry {
-    width: 380px;
+    width: 100%;
     margin: 0 auto;
     text-align: left;
 }
@@ -130,7 +121,7 @@ button {
     font-size: initial;
 }
 .zip-box .entry .group input[type="text"] {
-    width: calc(100% - 130px);
+    width: calc(100% - 110px);
     height: 40px;
     padding: 8px;
     background-color: var(--gray-1);
@@ -139,7 +130,7 @@ button {
     border-bottom-left-radius: 7px;
 }
 .zip-box .entry .group button {
-    width: 130px;
+    width: 110px;
     padding: 8px;
     height: 40px;
     border: none;
@@ -148,4 +139,124 @@ button {
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
     cursor: pointer;
+}
+.zip-box .show-address,
+.zip-box .show-address .head {
+    display: block;
+}
+.zip-box .show-address {
+    margin-top: 30px;
+    padding: 15px;
+    border: dotted 2px var(--purple-1);
+    border-radius: 10px;
+    
+    visibility: hidden;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+}
+.zip-box .show-address.active {
+    visibility: visible;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+.zip-box .show-address .head {
+    font-size: 0;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    border-bottom: dotted 2px var(--purple-1);
+}
+.zip-box .show-address .head .col {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: initial;
+}
+.zip-box .show-address .head .col:nth-child(1) {
+    width: calc(100% - 50px);
+    text-align: left;
+}
+.zip-box .show-address .head .col:nth-child(2) {
+    width: 50px;
+    text-align: right;
+}
+.zip-box .show-address .head b {
+    color: var(--black-1);
+}
+.zip-box .show-address .head a {
+    font-size: 25px;
+    color: var(--purple-1);
+}
+.zip-box .show-address p {
+    font-size: 16px;
+    color: var(--black-1);
+}
+
+/* address-box */
+.address-box {
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    right: 30px;
+    left: 410px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--gray-1);
+}
+.address-box .empty {
+    position: relative;
+    display: block;
+    text-align: center;
+    opacity: .15;
+}
+.address-box .empty p {
+    margin: 0;
+    font-size: 40px;
+    color: var(--purple-1)
+}
+.address-box .empty .icon {
+    font-size: 15rem;
+    color: var(--purple-1);
+}
+.address-box .heading h2 {
+    font-size: 25px;
+}
+.address-box .items {
+    display: block;
+}
+.address-box .items ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.address-box .items ul li {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    color: var(--black-1);
+}
+.address-box .items ul li:last-child {
+    margin-bottom: 0;
+}
+.address-box .items ul li:nth-child(odd) {
+    background-color: var(--gray-3);
+}
+.address-box .items ul li:nth-child(even) {
+    background-color: var(--white);
+}
+
+/* heading */
+.heading {
+    display: block;
+    margin-bottom: 30px;
+}
+.heading h2 {
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: var(--black-1);
+    margin: 0;
 }
