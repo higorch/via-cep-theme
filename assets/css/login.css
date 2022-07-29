@@ -1,0 +1,28 @@
+body {
+	background-color: #f1f0f0;
+}
+.login form {
+	background: #faf5f5;
+	border-radius: 8px;
+}
+#login h1 a, 
+.login h1 a {
+	background-image: url('../images/location.png');
+    width: 125px;
+	height: 125px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.wp-core-ui .button-primary {
+	background: #443e93;
+	border: none;
+}
+.wp-core-ui .button-primary:hover,
+.wp-core-ui .button-primary:focus {
+	background: #575757;
+}
+.login #login_error, 
+.login .message, 
+.login .success {
+	border-left: 4px solid #443e93;
+}
