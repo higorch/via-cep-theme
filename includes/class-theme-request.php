@@ -43,9 +43,18 @@ class ThemeRequest
             ),
         );
 
-        echo wp_insert_post($args);
+        if (wp_insert_post($args)) {
+            echo get_template_part('templates/saved', 'addresses');
+        } else {
+            echo 0;
+        }
 
         wp_die();
+    }
+
+    public function get()
+    {
+        # code...
     }
 }
 

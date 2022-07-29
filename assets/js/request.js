@@ -13,16 +13,18 @@
         };
 
         $.post(request_vct.ajax_url, data, function (response) {
-            if (response) {
-                cuteToast({
-                    type: 'success',
-                    message: "Salvo com sucesso!"
-                });
-            } else {
+            if (response == 0) {
                 cuteToast({
                     type: 'error',
                     message: "Não foi possível salvar!"
                 });
+            } else {
+                cuteToast({
+                    type: 'success',
+                    message: "Salvo com sucesso!"
+                });
+
+                $('.addresses-box').html(response);
             }
         });
     });

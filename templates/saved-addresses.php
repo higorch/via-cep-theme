@@ -1,27 +1,29 @@
-<div class="addresses-box">
+<?php
+$addresses = get_posts([
+    'posts_per_page' => -1,
+    'post_type'   => 'address'
+]);
+?>
 
-    <div class="empty">
-        <div class="icon">
-            <i class="fa-regular fa-circle-xmark"></i>
-        </div>
-        <p>Nenhum endereço salvo.</p>
-    </div>
-
-    <!-- <div class="heading">
+<?php if (count($addresses)) : ?>
+    <div class="heading">
         <h2>Endereços salvos</h2>
     </div>
 
     <div class="items">
 
         <ul>
-            <li>BR-153, 2514 - Vila Santa, Aparecida de Goiânia - GO, 74910-180</li>
-            <li>BR-153, 2514 - Vila Santa, Aparecida de Goiânia - GO, 74910-180</li>
-            <li>BR-153, 2514 - Vila Santa, Aparecida de Goiânia - GO, 74910-180</li>
-            <li>BR-153, 2514 - Vila Santa, Aparecida de Goiânia - GO, 74910-180</li>
-            <li>BR-153, 2514 - Vila Santa, Aparecida de Goiânia - GO, 74910-180</li>
+            <?php foreach ($addresses as $address) : ?>
+                <li><?php echo $address->post_title; ?></li>
+            <?php endforeach; ?>
         </ul>
 
-    </div> -->
-
-</div>
-<!-- address-box -->
+    </div>
+<?php else : ?>
+    <div class="empty">
+        <div class="icon">
+            <i class="fa-regular fa-circle-xmark"></i>
+        </div>
+        <p>Nenhum endereço salvo.</p>
+    </div>
+<?php endif; ?>

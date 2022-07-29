@@ -37,7 +37,10 @@
 </div>
 <!-- zip-box -->
 
-<?php get_template_part('templates/saved', 'addresses'); ?>
+<div class="addresses-box">
+    <?php get_template_part('templates/saved', 'addresses'); ?>
+</div>
+<!-- address-box -->
 
 <?php
 
