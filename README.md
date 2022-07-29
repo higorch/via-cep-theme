@@ -23,5 +23,5 @@ Integrado com API ViaCep
 
 - Custom post type
 - Custom Metaboxes
+- Foi utilizado as actions e hooks para requisição ajax e carregamento de scripts.
 - Funções nativas: language_attributes(), wp_head(), wp_body_open(), wp_footer(), get_header(), get_footer(), get_template_part()
-- Tambem foi utilizado as actions e hookes para requisição ajax e carregamento de scripts.
