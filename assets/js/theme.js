@@ -1,5 +1,7 @@
 (function ($) {
 
+    window.ADDRESS_DETAILS;
+
     $.displayIfNotEmpty = function (value, concatenation = '') {
 
         if (value.length === 0)
@@ -11,6 +13,8 @@
     $.isZip = function (zip) {
         return /^[0-9]{5}-[0-9]{3}$/.test(zip);
     }
+
+    $('#zip').mask('00000-000');
 
     $('.zip-box .entry .group button').on('click', function (e) {
 
@@ -44,7 +48,7 @@
                 return;
             }
 
-            console.log(data);
+            ADDRESS_DETAILS = data;
 
             var address = $.displayIfNotEmpty(data.logradouro, ', ') + $.displayIfNotEmpty(data.bairro, ', ') + $.displayIfNotEmpty(data.complemento, ', ') + $.displayIfNotEmpty(data.localidade, ' - ') + $.displayIfNotEmpty(data.uf, ', ') + $.displayIfNotEmpty(data.cep);
 
@@ -58,7 +62,5 @@
         });
 
     });
-
-    $('#zip').mask('00000-000');
 
 })(jQuery);
