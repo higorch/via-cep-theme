@@ -16,12 +16,12 @@ class ThemeSetup
     {
         wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css');
         wp_enqueue_style('cute-alert', get_template_directory_uri() . '/assets/plugins/cute-alert/style.css');
-        wp_enqueue_style('fonts', get_template_directory_uri() . '/assets/fonts/stylesheet.css', [], '1.0.1');
-        wp_enqueue_style('theme', get_template_directory_uri() . '/assets/css/theme.css', [], '1.0.1');
+        wp_enqueue_style('fonts', get_template_directory_uri() . '/assets/fonts/stylesheet.css', [], '1.0.2');
+        wp_enqueue_style('theme', get_template_directory_uri() . '/assets/css/theme.css', [], '1.0.2');
 
         wp_enqueue_script('jquery-mask', get_template_directory_uri() . '/assets/plugins/jquery-mask/jquery.mask.min.js', ['jquery'], null, true);
         wp_enqueue_script('cute-alert', get_template_directory_uri() . '/assets/plugins/cute-alert/cute-alert.js', ['jquery'], null, true);
-        wp_enqueue_script('theme', get_template_directory_uri() . '/assets/js/theme.js', ['jquery'], '1.0.1', true);
+        wp_enqueue_script('theme', get_template_directory_uri() . '/assets/js/theme.js', ['jquery'], '1.0.2', true);
     }
 
     public function custom_login_style()

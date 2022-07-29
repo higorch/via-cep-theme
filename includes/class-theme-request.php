@@ -16,7 +16,7 @@ class ThemeRequest
 
     public function enqueue_scripts()
     {
-        wp_enqueue_script('request-vct', get_template_directory_uri() . '/assets/js/request.js', ['jquery'], '1.0.1', true);
+        wp_enqueue_script('request-vct', get_template_directory_uri() . '/assets/js/request.js', ['jquery'], '1.0.2', true);
         wp_localize_script('request-vct', 'request_vct', array('ajax_url' => admin_url('admin-ajax.php')));
     }
 

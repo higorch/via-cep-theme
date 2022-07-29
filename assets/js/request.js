@@ -24,6 +24,11 @@
                     message: "Salvo com sucesso!"
                 });
 
+                $('#zip').val('');
+                $('.zip-box .show-address').removeClass('active');
+
+                ADDRESS_DETAILS = '';
+
                 $('.addresses-box').html(response);
             }
         });

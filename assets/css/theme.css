@@ -202,6 +202,7 @@ button {
     left: 410px;
     padding: 30px;
     border-radius: 10px;
+    overflow-y: auto;
     background-color: var(--gray-1);
 }
 .addresses-box .empty {
